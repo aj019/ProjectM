@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hackmsit.projectm.HomeActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        >
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            >
+
+            <FrameLayout
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp"
+                    >
+                <Button
+                    android:layout_width="155dp"
+                    android:layout_height="100dp"
+                    android:textSize="40dp"
+                    android:text="PHP"
+                    android:background="@drawable/blue_button"
+                    android:textColor="#fff"
+                    android:id="@+id/btPHP"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <Button
+                    android:layout_width="155dp"
+                    android:layout_height="100dp"
+                    android:textSize="40dp"
+                    android:text="HTML"
+                    android:background="@drawable/green_button"
+                    android:textColor="#fff"
+
+                    android:id="@+id/btHtml" />
+
+                    <Button
+                        android:layout_width="155dp"
+                        android:layout_height="100dp"
+                        android:textSize="30dp"
+                        android:text="Android"
+                        android:background="@drawable/orange_button"
+                        android:textColor="#fff"
+                        android:id="@+id/btAndroid"
+                        android:layout_below="@id/btHtml"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <Button
+                        android:layout_width="155dp"
+                        android:layout_height="100dp"
+                        android:textSize="40dp"
+                        android:text="C#"
+                        android:background="@drawable/yellow_button"
+                        android:textColor="#fff"
+                        android:id="@+id/btChash"
+                        android:layout_alignTop="@+id/btAndroid"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+
+                </RelativeLayout>
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_width="wrap_content"
+            android:layout_gravity="start"
+            app:menu="@menu/menu"
+            />
+
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>

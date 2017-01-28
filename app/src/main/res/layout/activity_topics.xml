@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f1f4"
+    tools:context="com.hackmsit.projectm.TopicsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/HtmlSearch"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:layout_width="300dp"
+            android:hint="Search for Mentors"
+            android:layout_height="wrap_content"
+            android:id="@+id/etHtmlSearch"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="40dp"
+            android:focusable="false"
+     />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_search"
+            android:id="@+id/btHtmlSearch"
+            android:layout_below="@+id/toolbar" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Top Rated in HTML"
+        android:id="@+id/tvTopRatedHtml"
+        android:layout_below="@+id/HtmlSearch"
+        android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvHtmlTopRated"
+        android:layout_below="@+id/tvTopRatedHtml"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

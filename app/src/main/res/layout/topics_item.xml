@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <Button
+        android:id="@+id/btChooseTopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C#"
+        android:textColor="#f44336"
+        android:background="@drawable/choose_beg"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        />
+
+</LinearLayout>

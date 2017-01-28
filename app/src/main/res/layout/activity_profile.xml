@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context="com.hackmsit.projectm.Profile">
+
+
+    <android.support.design.widget.AppBarLayout android:layout_height="256dp"
+        android:layout_width="match_parent" android:theme="@style/AppTheme"
+        android:fitsSystemWindows="true">
+
+
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapse_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:background="@color/material_deep_teal_500"
+            android:fitsSystemWindows="true"
+
+            app:titleEnabled="false"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/meal_image_order"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/mentor1"
+                    app:border_width="2dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    app:border_color = "#fff"
+
+                   />
+
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="120dp"
+                    android:layout_alignParentLeft="true"
+                    android:text="Ridhima Shetty"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#fff"/>
+
+                <TextView
+                    android:id="@+id/institution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MAIT"
+                    android:layout_below="@+id/name"
+                    android:textSize="18sp"
+                    android:textColor="#fff"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rating - 4.4"
+                    android:layout_below="@+id/institution"
+                    android:textSize="18sp"
+                    android:textColor="#fff"
+                    android:layout_marginLeft="10dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Request"
+                    android:id="@+id/btRequest"
+                    android:textSize="16sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="70dp"
+                    android:layout_marginRight="10dp"
+                    android:background = "@color/colorPrimary"/>
+
+
+
+
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent" android:theme="@style/AppTheme.AppBarOverlay"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:layout_collapseMode="pin"/>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+  <!--  <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity = "fill_vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        >
+
+
+
+
+    </android.support.v4.widget.NestedScrollView> -->
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/recyclerView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="outsideOverlay"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+
+        />
+
+
+
+</android.support.design.widget.CoordinatorLayout>
